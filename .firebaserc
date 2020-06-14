@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "financeapp-39d47": {
+      "hosting": {
+        "FinanceApplication": [
+          "financeapp-39d47"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "financeapp-39d47"
+  }
+}

@@ -1,0 +1,18 @@
+<br><br><br>
+<div class="container">
+    <div class="row m-3">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                     <h2 class="text-center">Edit Category</h2>
+                     <br>
+                     <input *ngIf="changecategory" type="text" class="form-control" [(ngModel)]="changecategory.name">
+                     <br>
+                     <button class="btn btn-primary" (click)="save()">Change</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

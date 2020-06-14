@@ -1,0 +1,41 @@
+<!-- <div class="fixed-top"> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">FinanceApplication</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home/manage-categories">Manage Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/manage-expencies">Manage Expencies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/expence-summary">Expence Summary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="home/manage-categories">Manage Categories<span class="sr-only">(current)</span></a>
+            <a class="dropdown-item" routerLink="home/manage-expencies">Manage Expencies</a>
+            <a class="dropdown-item" routerLink="/home/expence-summary">Expence Summary</a>
+            <a class="dropdown-item" routerLink="/home/profile">Profile</a>
+            <a class="dropdown-item" (click)="logout()">Logout</a>       
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+<!--   
+</div> -->

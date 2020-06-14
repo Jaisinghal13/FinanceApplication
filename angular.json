@@ -117,8 +117,16 @@
               "devServerTarget": "FinanceApplication:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "FinanceApplication"
+    }
+  },
+  "defaultProject": "FinanceApplication",
+  "cli": {
+    "analytics": false
+  }
 }

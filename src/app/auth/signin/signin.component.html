@@ -1,0 +1,72 @@
+<div class="container" style="padding-left: 0px; padding-right: 0px;">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6"  style="padding-left: 0px; padding-right: 3px;">
+            <div class="card">
+
+                <div class="card-header p-0">
+                    <img src="../../../assets/financeappimage.png" alt="" class="img-fluid">
+                    <h1 style="color: cornflowerblue; position: absolute; top: 0px;left:11px;margin-left: 3px;">Finance Application</h1>
+                 </div>
+                
+                <div class="card-body">
+                    <h2 class="text-center" style="color:lightseagreen;font-family: 'Times New Roman', Times, serif;">Sign In</h2>
+                    
+                    <h5>Email</h5>
+    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email">
+                    </div>
+                
+                 
+                    <h5>Password</h5>
+                    <div *ngIf="unseen">
+                     <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+                        <div class="input-group-append">
+                            <button (click)="read()" class="input-group-text btn fa fa-eye-slash" aria-hidden="true"></button>
+                        </div>
+                      </div>
+                    </div>
+
+                <div *ngIf="!unseen">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Password" [(ngModel)]="password">
+                        <div class="input-group-append">
+                                <button (click)="read()" class="input-group-text btn fa fa-eye" aria-hidden="true"></button>
+                        </div>
+                    </div>
+                </div>
+                      
+                    
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-block" (click)="signin()">Sign in</button>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <p><a routerLink="/auth/reset-password"  style="color:green;">Forgot Password ?</a> </p>
+                    </div>
+
+                    <div class="text-center">
+                        <p>Don't have an account ? <a routerLink="/auth/signup"  style="color:green;">Sign Up</a> </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-primary rounded-pill " (click)="signinwithgoogle()">Sign in With Google</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

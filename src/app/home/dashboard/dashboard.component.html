@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <br><br>
+        <div class="card" routerLink="/home/manage-categories">
+            <img class="img-thumbnail img-fluid" src="../../../assets/addCategory.jpg" alt="">
+            <button routerLink="/home/manage-categories" class="card-text btn btn-info btn-block">Manage Categories</button>
+        </div>
+        <br>
+        <div class="card" routerLink="/home/manage-expencies">
+            <img class="img-thumbnail img-fluid" src="../../../assets/addExpence.jpg" alt="">
+            <button routerLink="/home/manage-expencies" class="btn btn-info btn-block">Manage Expence</button>
+        </div>
+        <br>
+        <div class="card" routerLink="/home/expence-summary">
+            <img class="img-thumbnail" src="../../../assets/summary.jpg" alt="">
+            <button routerLink="/home/expence-summary" class="btn btn-info btn-block">Summary</button>
+        </div>
+        <br>
+        <div class="card" (click)="logout()">
+            <img class="img-thumbnail" src="../../../assets/logout1.png" alt="">
+            <button class="btn btn-info btn-block" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+</div>

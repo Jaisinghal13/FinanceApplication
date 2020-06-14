@@ -1,0 +1,41 @@
+<div class="container" style="padding-left: 0px; padding-right: 0px;">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6" style="padding-left: 0px; padding-right: 4px;">
+            <div class="card">
+
+                <div class="card-header p-0">
+                    <img src="../../../assets/financeappimage.png" alt="" class="img-fluid">
+                    <h1 style="color: cornflowerblue; position: absolute; top: 0px;left:11px">Finance Application</h1>
+                 </div>
+
+                <div class="card-body">
+                    <h2 class="text-center" style="color:lightseagreen;font-family: 'Times New Roman', Times, serif;">Reset Password</h2>
+                    <br>
+            
+                    <h5>Email</h5>
+    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email">
+                    </div>
+            
+                      
+                    <br>
+                    <div class="text-center">
+                        <button class="btn btn-primary m-1" (click)="resetPassword()">Confirm</button>
+                    </div>
+                    <br>
+
+                    <div class="text-center">
+                        <p>Back to <a routerLink="/auth/signin"  style="color:green;">Sign In</a> </p>
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<br><br>
+<div class="container">
+    
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="text-center">   
+                <h3  style="color: cornflowerblue;">Finance Application</h3>
+            </div>
+            <h5>Edit User name</h5>
+            <input *ngIf="user" type="text" class="form-control" [(ngModel)]="user.name">
+            <br>
+            <h5>Upload/Edit Image</h5>
+            <input #file type="file" accept="image/*" (change)="preview(file.files)" style="margin-bottom: 8px;">
+            <span style="color:red;" *ngIf="message">{{message}}</span>
+            <div class="text-center" >
+                <img *ngIf="!userPhotoExist" src="../../../../assets/userlogo.png" height="200" alt="Your image" style="border-radius: 50%; width: 200px; margin-bottom: 8px;">
+                <img *ngIf="userPhotoExist" [src]="user.PhotoURL" height="200" alt="Your image" style="border-radius: 50%; width: 200px; margin-bottom: 8px;">
+            </div>
+             <br>
+            <h5>Upload Phone Number</h5>
+            <input *ngIf="user" type="number" class="form-control" [(ngModel)]="user.phoneNo">
+            <br>
+            <div class="text-center">
+                <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">Save Changes</button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Save Changes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                      Do you want to save changes
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onSubmit()">Yes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    
+</div>

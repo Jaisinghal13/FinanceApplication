@@ -1,0 +1,35 @@
+<div class="container">
+    <br><br>
+       
+    
+    <div class="card">
+        <div class="card-body">
+     <h3 style="float: left;">All Expences</h3>
+
+     <a routerLink="/home/manage-expencies/add-expence" style="float: right;"><i class="fa fa-plus-circle fa-2x"></i></a>
+    </div>
+ </div>
+
+    <br><br>
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Expence Date</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let expence of expences">
+            <tr>
+                <td>{{expence.timestamp.toDate() | date }}</td>
+                <td>{{expence.amount}}</td>
+                <td>{{expence.category | uppercase}}</td>
+                <td>
+                    <a (click)="deleteExpence(this.expence.id)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <a class="mx-2" style="color: black;" [routerLink]="[ '/home/manage-expencies/edit-expence', this.expence.id ]"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
