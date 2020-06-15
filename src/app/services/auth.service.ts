@@ -51,6 +51,7 @@ export class AuthService {
         alert("Please Verify your email first to signin")
       }
     }).catch(err=>{
+      alert(err);
       console.log(err)
     })
    
