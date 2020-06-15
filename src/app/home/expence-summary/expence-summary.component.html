@@ -13,20 +13,21 @@
                 <thead>
                     <tr>
                         <th>Expence Date</th>
-                        <th>Amount</th>
+                        <th>Amount ( <span>&#8377;</span> ) </th>
                         <th>Category</th>
                     </tr>
                 </thead>
                 <tbody *ngFor="let expence of expences">
                     <tr>
                         <td>{{expence.timestamp.toDate() | date }}</td>
-                        <td>{{expence.amount}}</td>
+                        <td><span>&#8377;</span>{{expence.amount}}</td>
                         <td>{{expence.category | uppercase}}</td>
                     </tr>
                 </tbody>
                 <tr *ngIf="category">
                     <td></td>
-                    <td>Total Expence : {{this.totalExpence}} </td>
+                    <td>Total Expence : 
+                        <span *ngIf="this.totalExpence">&#8377;</span> {{this.totalExpence}} </td>
                     <td></td>
                 </tr>
             </table>

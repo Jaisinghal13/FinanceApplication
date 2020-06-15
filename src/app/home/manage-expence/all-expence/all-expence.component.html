@@ -15,7 +15,7 @@
         <thead>
             <tr>
                 <th>Expence Date</th>
-                <th>Amount</th>
+                <th>Amount ( <span>&#8377;</span> ) </th>
                 <th>Category</th>
                 <th>Action</th>
             </tr>
@@ -23,7 +23,7 @@
         <tbody *ngFor="let expence of expences">
             <tr>
                 <td>{{expence.timestamp.toDate() | date }}</td>
-                <td>{{expence.amount}}</td>
+                <td><span>&#8377;</span> {{expence.amount}}</td>
                 <td>{{expence.category | uppercase}}</td>
                 <td>
                     <a (click)="deleteExpence(this.expence.id)"><i class="fa fa-trash" aria-hidden="true"></i></a>
