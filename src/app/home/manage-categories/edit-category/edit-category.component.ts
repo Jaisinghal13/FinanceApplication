@@ -27,9 +27,13 @@ export class EditCategoryComponent implements OnInit {
   }
 
   save(){
+    if(this.changecategory.name!=""){
     this.category.changecategory(this.categoryid, this.changecategory).then(res=>{
       this.router.navigateByUrl("/home/manage-categories/all-category");
     })
+  }else{
+    alert("Category cannot be empty");
+  }
   }
 
 }

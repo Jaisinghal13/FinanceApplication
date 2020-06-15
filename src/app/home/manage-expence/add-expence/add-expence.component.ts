@@ -20,9 +20,13 @@ export class AddExpenceComponent implements OnInit {
   }
 
   addExpence(){
+    if(this.expence.category!=null && this.expence.amount!=null){
     this.expenceService.addExpence(this.expence).then(res=>{
       this.router.navigateByUrl("home/manage-expencies");
     })
+   }else{
+     alert("Field can not be empty");
+   }
   }
 
   getUserCategories(){

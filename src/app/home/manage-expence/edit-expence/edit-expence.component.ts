@@ -33,8 +33,12 @@ export class EditExpenceComponent implements OnInit {
   }
 
   save(){
+    if(this.expence.amount!=null){
     this.expenceService.updateExpence(this.expenceid, this.expence).then(res=>{
       this.router.navigateByUrl("/home/manage-expencies");
     })
+  }else{
+    alert("Amount can not be empty");
+  }
   }
 }

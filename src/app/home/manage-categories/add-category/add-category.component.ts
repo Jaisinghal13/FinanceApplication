@@ -16,8 +16,12 @@ export class AddCategoryComponent implements OnInit {
   }
 
   addCategory(){
+    if(this.categoryname!=null){
     this.category.addCategory(this.categoryname);
     this.router.navigateByUrl('/home/manage-categories/all-category')
+  }else{
+    alert("Category Field cannot be empty");
   }
+}
 
 }
